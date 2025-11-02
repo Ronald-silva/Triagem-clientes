@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon otimizado -->
+    <link rel="icon" href="img/magnifying.svg" type="image/svg+xml" />
+    <link rel="shortcut icon" href="img/magnifying.svg" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="img/magnifying.svg" />
+    <title>Triagem Inteligente de leads</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>🔍 Triagem Inteligente de Clientes</h1>
+      <p>
+        Avalie o potencial de conversão das empresas antes de investir tempo e
+        energia.
+      </p>
+
+      <form id="triagemForm">
+        <div class="question">
+          <label>1️⃣ A empresa possui site próprio?</label>
+          <select required>
+            <option value="">Selecione</option>
+            <option value="3">Sim</option>
+            <option value="2">Não, mas demonstra interesse</option>
+            <option value="1">Não possui e não demonstra interesse</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label>2️⃣ O site é responsivo e otimizado para SEO?</label>
+          <select required>
+            <option value="">Selecione</option>
+            <option value="3">Sim</option>
+            <option value="2">Parcialmente</option>
+            <option value="1">Não</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label
+            >3️⃣ O posicionamento visual (fotos, cores, identidade) é
+            profissional?</label
+          >
+          <select required>
+            <option value="">Selecione</option>
+            <option value="3">Excelente</option>
+            <option value="2">Mediano</option>
+            <option value="1">Fraco</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label>4️⃣ A presença no Google (avaliações, ficha) é boa?</label>
+          <select required>
+            <option value="">Selecione</option>
+            <option value="3">Sim</option>
+            <option value="2">Razoável</option>
+            <option value="1">Fraca ou inexistente</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label>5️⃣ O engajamento nas redes sociais é ativo?</label>
+          <select required>
+            <option value="">Selecione</option>
+            <option value="3">Sim, bastante ativo</option>
+            <option value="2">Razoável</option>
+            <option value="1">Fraco ou inexistente</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label>6️⃣ O público da empresa tem bom poder de compra?</label>
+          <select required>
+            <option value="">Selecione</option>
+            <option value="3">Sim</option>
+            <option value="2">Moderado</option>
+            <option value="1">Baixo</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label>7️⃣ O dono ou gestor demonstra interesse por inovação?</label>
+          <select required>
+            <option value="">Selecione</option>
+            <option value="3">Sim</option>
+            <option value="2">Razoável</option>
+            <option value="1">Não</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label>8️⃣ O nicho da empresa é lucrativo ou tende a crescer?</label>
+          <select required>
+            <option value="">Selecione</option>
+            <option value="3">Sim, em expansão</option>
+            <option value="2">Estável</option>
+            <option value="1">Estagnado</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label>9️⃣ O dono é aberto a parcerias e novas ideias?</label>
+          <select required>
+            <option value="">Selecione</option>
+            <option value="3">Sim</option>
+            <option value="2">Talvez</option>
+            <option value="1">Não</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label
+            >🔟 Existe percepção clara de marca (logo, slogan, proposta
+            visual)?</label
+          >
+          <select required>
+            <option value="">Selecione</option>
+            <option value="3">Sim</option>
+            <option value="2">Parcial</option>
+            <option value="1">Não</option>
+          </select>
+        </div>
+
+        <button type="submit">Analisar Potencial</button>
+      </form>
+
+      <div id="resultado" class="resultado"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -11,124 +11,224 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <h1>🔍 Triagem Inteligente de Clientes</h1>
-      <p>
-        Avalie o potencial de conversão das empresas antes de investir tempo e
-        energia.
-      </p>
+    <!-- Header principal -->
+    <header class="main-header">
+      <div class="header-content">
+        <h1>🔍 Triagem Inteligente de Clientes</h1>
+        <p>Avalie o potencial de conversão das empresas antes de investir tempo e energia.</p>
+      </div>
+    </header>
 
-      <form id="triagemForm">
-        <div class="question">
-          <label>1️⃣ A empresa possui site próprio?</label>
-          <select required>
-            <option value="">Selecione</option>
-            <option value="3">Sim</option>
-            <option value="2">Não, mas demonstra interesse</option>
-            <option value="1">Não possui e não demonstra interesse</option>
-          </select>
+    <!-- Navegação por abas -->
+    <nav class="tab-navigation">
+      <div class="nav-container">
+        <button class="tab-button active" data-tab="triagem">
+          📝 Nova Triagem
+        </button>
+        <button class="tab-button" data-tab="ranking">
+          📊 Ranking de Leads
+        </button>
+      </div>
+    </nav>
+
+    <!-- Container principal -->
+    <main class="main-content">
+      <!-- Aba de Triagem -->
+      <section id="triagemTab" class="tab-content active">
+        <div class="container">
+          <div class="form-header">
+            <h2>Análise de Prospect</h2>
+            <p>Avalie a empresa através de pesquisa externa para priorizar sua prospecção</p>
+          </div>
+
+          <form id="triagemForm" class="triagem-form">
+            <div class="questions-grid">
+              <div class="question">
+                <label>1️⃣ A empresa possui site próprio e funcional?</label>
+                <select required>
+                  <option value="">Selecione</option>
+                  <option value="3">Site profissional e atualizado</option>
+                  <option value="2">Site básico mas funcional</option>
+                  <option value="1">Sem site ou site muito defasado</option>
+                </select>
+              </div>
+
+              <div class="question">
+                <label>2️⃣ Qual o porte aparente da empresa?</label>
+                <select required>
+                  <option value="">Selecione</option>
+                  <option value="3">Empresa estabelecida (múltiplas unidades/equipe visível)</option>
+                  <option value="2">Empresa média (estrutura organizada)</option>
+                  <option value="1">Microempresa ou pessoa física</option>
+                </select>
+              </div>
+
+              <div class="question">
+                <label>3️⃣ O segmento/nicho da empresa é de alto valor?</label>
+                <select required>
+                  <option value="">Selecione</option>
+                  <option value="3">Segmento premium (medicina, advocacia, consultoria)</option>
+                  <option value="2">Segmento médio (varejo especializado, serviços)</option>
+                  <option value="1">Segmento commoditizado (produtos básicos)</option>
+                </select>
+              </div>
+
+              <div class="question">
+                <label>4️⃣ A presença digital da empresa é forte?</label>
+                <select required>
+                  <option value="">Selecione</option>
+                  <option value="3">Google Meu Negócio completo + boas avaliações</option>
+                  <option value="2">Presença básica no Google com algumas avaliações</option>
+                  <option value="1">Presença fraca ou inexistente no Google</option>
+                </select>
+              </div>
+
+              <div class="question">
+                <label>5️⃣ A empresa investe em marketing digital?</label>
+                <select required>
+                  <option value="">Selecione</option>
+                  <option value="3">Anúncios pagos, redes sociais ativas, conteúdo regular</option>
+                  <option value="2">Presença básica nas redes, algumas ações de marketing</option>
+                  <option value="1">Marketing tradicional ou inexistente</option>
+                </select>
+              </div>
+
+              <div class="question">
+                <label>6️⃣ A concorrência no nicho está digitalizada?</label>
+                <select required>
+                  <option value="">Selecione</option>
+                  <option value="3">Concorrentes ainda tradicionais (grande oportunidade)</option>
+                  <option value="2">Concorrência mista (digital + tradicional)</option>
+                  <option value="1">Nicho já saturado digitalmente</option>
+                </select>
+              </div>
+
+              <div class="question">
+                <label>7️⃣ A empresa demonstra sinais de crescimento?</label>
+                <select required>
+                  <option value="">Selecione</option>
+                  <option value="3">Expansão recente, novas unidades, contratações</option>
+                  <option value="2">Estável com alguns sinais de crescimento</option>
+                  <option value="1">Sem sinais de crescimento ou em declínio</option>
+                </select>
+              </div>
+
+              <div class="question">
+                <label>8️⃣ O posicionamento visual da marca é profissional?</label>
+                <select required>
+                  <option value="">Selecione</option>
+                  <option value="3">Identidade visual consistente e profissional</option>
+                  <option value="2">Visual mediano, algumas inconsistências</option>
+                  <option value="1">Visual amador ou muito inconsistente</option>
+                </select>
+              </div>
+
+              <div class="question">
+                <label>9️⃣ A empresa tem facilidade de contato/acesso?</label>
+                <select required>
+                  <option value="">Selecione</option>
+                  <option value="3">Múltiplos canais, WhatsApp, formulários, telefone</option>
+                  <option value="2">Alguns canais de contato disponíveis</option>
+                  <option value="1">Difícil de encontrar contato ou muito limitado</option>
+                </select>
+              </div>
+
+              <div class="question">
+                <label>🔟 O nicho da empresa tem potencial de crescimento?</label>
+                <select required>
+                  <option value="">Selecione</option>
+                  <option value="3">Setor em expansão ou com demanda crescente</option>
+                  <option value="2">Setor estável com oportunidades pontuais</option>
+                  <option value="1">Setor estagnado ou em declínio</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn-analyze">
+                🚀 Analisar Potencial
+              </button>
+            </div>
+          </form>
+
+          <div id="resultado" class="resultado"></div>
         </div>
+      </section>
 
-        <div class="question">
-          <label>2️⃣ O site é responsivo e otimizado para SEO?</label>
-          <select required>
-            <option value="">Selecione</option>
-            <option value="3">Sim</option>
-            <option value="2">Parcialmente</option>
-            <option value="1">Não</option>
-          </select>
+      <!-- Aba de Ranking -->
+      <section id="rankingTab" class="tab-content">
+        <div class="container">
+          <div class="ranking-header">
+            <h2>📊 Ranking de Leads</h2>
+            <p>Visualize e gerencie suas análises salvas</p>
+          </div>
+
+          <!-- Controles do ranking -->
+          <div class="ranking-controls">
+            <div class="controls-row">
+              <div class="search-container">
+                <input type="text" id="searchInput" placeholder="🔍 Buscar empresa..." class="search-input">
+              </div>
+              <div class="control-buttons">
+                <button id="refreshRanking" class="btn-control">
+                  <span class="btn-icon">🔄</span>
+                  <span class="btn-text">Atualizar</span>
+                </button>
+                <button id="exportCSV" class="btn-control btn-export">
+                  <span class="btn-icon">📊</span>
+                  <span class="btn-text">Exportar</span>
+                </button>
+                <button id="clearHistory" class="btn-control btn-danger">
+                  <span class="btn-icon">🗑️</span>
+                  <span class="btn-text">Limpar</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Seção de estatísticas -->
+          <div id="statsSection" class="stats-section"></div>
+
+          <!-- Container da tabela de ranking -->
+          <div id="rankingTableContainer" class="ranking-table-container">
+            <div id="emptyState" class="empty-state">
+              <div class="empty-icon">📋</div>
+              <h3>Nenhuma análise salva ainda</h3>
+              <p>Complete uma triagem na aba "Nova Triagem" e salve o resultado para começar seu ranking!</p>
+              <button class="btn-empty-action" onclick="switchToTab('triagem')">
+                📝 Fazer Nova Triagem
+              </button>
+            </div>
+            <div id="rankingTable" class="ranking-table"></div>
+          </div>
         </div>
+      </section>
+    </main>
 
-        <div class="question">
-          <label
-            >3️⃣ O posicionamento visual (fotos, cores, identidade) é
-            profissional?</label
-          >
-          <select required>
-            <option value="">Selecione</option>
-            <option value="3">Excelente</option>
-            <option value="2">Mediano</option>
-            <option value="1">Fraco</option>
-          </select>
+    <!-- Modal para input do nome da empresa -->
+    <div id="nameInputModal" class="modal">
+      <div class="modal-content">
+        <h3>💾 Salvar Resultado da Análise</h3>
+        <p>Digite o nome da empresa para salvar no ranking:</p>
+        <input type="text" id="companyName" placeholder="Nome da empresa" maxlength="100">
+        <div class="modal-buttons">
+          <button id="saveResult" class="btn-primary">Salvar</button>
+          <button id="cancelSave" class="btn-secondary">Cancelar</button>
         </div>
+      </div>
+    </div>
 
-        <div class="question">
-          <label>4️⃣ A presença no Google (avaliações, ficha) é boa?</label>
-          <select required>
-            <option value="">Selecione</option>
-            <option value="3">Sim</option>
-            <option value="2">Razoável</option>
-            <option value="1">Fraca ou inexistente</option>
-          </select>
+    <!-- Modal de confirmação para limpeza -->
+    <div id="confirmModal" class="modal">
+      <div class="modal-content">
+        <h3>⚠️ Confirmar Limpeza</h3>
+        <p>Tem certeza que deseja apagar todo o histórico de análises?</p>
+        <p><strong>Esta ação não pode ser desfeita.</strong></p>
+        <div class="modal-buttons">
+          <button id="confirmClear" class="btn-danger">Sim, Limpar Tudo</button>
+          <button id="cancelClear" class="btn-secondary">Cancelar</button>
         </div>
-
-        <div class="question">
-          <label>5️⃣ O engajamento nas redes sociais é ativo?</label>
-          <select required>
-            <option value="">Selecione</option>
-            <option value="3">Sim, bastante ativo</option>
-            <option value="2">Razoável</option>
-            <option value="1">Fraco ou inexistente</option>
-          </select>
-        </div>
-
-        <div class="question">
-          <label>6️⃣ O público da empresa tem bom poder de compra?</label>
-          <select required>
-            <option value="">Selecione</option>
-            <option value="3">Sim</option>
-            <option value="2">Moderado</option>
-            <option value="1">Baixo</option>
-          </select>
-        </div>
-
-        <div class="question">
-          <label>7️⃣ O dono ou gestor demonstra interesse por inovação?</label>
-          <select required>
-            <option value="">Selecione</option>
-            <option value="3">Sim</option>
-            <option value="2">Razoável</option>
-            <option value="1">Não</option>
-          </select>
-        </div>
-
-        <div class="question">
-          <label>8️⃣ O nicho da empresa é lucrativo ou tende a crescer?</label>
-          <select required>
-            <option value="">Selecione</option>
-            <option value="3">Sim, em expansão</option>
-            <option value="2">Estável</option>
-            <option value="1">Estagnado</option>
-          </select>
-        </div>
-
-        <div class="question">
-          <label>9️⃣ O dono é aberto a parcerias e novas ideias?</label>
-          <select required>
-            <option value="">Selecione</option>
-            <option value="3">Sim</option>
-            <option value="2">Talvez</option>
-            <option value="1">Não</option>
-          </select>
-        </div>
-
-        <div class="question">
-          <label
-            >🔟 Existe percepção clara de marca (logo, slogan, proposta
-            visual)?</label
-          >
-          <select required>
-            <option value="">Selecione</option>
-            <option value="3">Sim</option>
-            <option value="2">Parcial</option>
-            <option value="1">Não</option>
-          </select>
-        </div>
-
-        <button type="submit">Analisar Potencial</button>
-      </form>
-
-      <div id="resultado" class="resultado"></div>
+      </div>
     </div>
 
     <script src="script.js"></script>
